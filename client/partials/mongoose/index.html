@@ -1,0 +1,28 @@
+<h1>Welcome to Mongoose</h1>
+    <div ng-repeat = "mongoose in mongooses">
+	    <ul>
+	      <li><a ng-click="showMongoose(mongoose._id)">Name: {{ mongoose.name }}</a></li>
+	      <li>Weight: {{mongoose.weight}}</li>
+	      <li>Color: {{ mongoose.color }}</li>
+	    </ul>
+	    
+	   <button ng-click = "removeMongoose(mongoose)">Delete Mongoose</button>
+	 </div>
+   <hr>
+
+	<h1>Add New Mongoose</h1>
+	<form>
+		<div>
+			<label for="">Mongoose Name: </label>
+			<input type="text" ng-model = "newMongoose.name" id="">
+		</div>
+		<div>
+			<label for="">Mongoose Weight: </label>
+			<input type="text" ng-model = "newMongoose.weight" id="">
+		</div>
+		<div>
+			<label for="">Mongoose Color: </label>
+			<input type="text" ng-model = "newMongoose.color" id=""> 
+		</div>
+		<input type="submit" value="Add Mongoose" ng-click = "addMongoose()">
+	</form>
